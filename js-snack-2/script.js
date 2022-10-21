@@ -9,10 +9,7 @@ const strings = [
     "LoReNzO"
 ];
 
-
-const newString = [];
-
-strings.forEach(element => {
+strings.forEach((element, index, array) => {
 
     const firstLetter = element.charAt(0);
 
@@ -24,8 +21,8 @@ strings.forEach(element => {
 
     const capitalizedWord = firstLetterCap + remainingLettersLow;
 
-    newString.push(capitalizedWord);
+    array[index] = capitalizedWord;
 
 });
 
-console.log(newString);
+console.log(strings);
