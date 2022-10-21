@@ -19,7 +19,7 @@ const carsList = [
 
         modello: "Panda",
 
-        alimentazione: "Benzina"
+        alimentazione: "Metano"
     },
 
     {
@@ -35,7 +35,7 @@ const carsList = [
 
         modello: "C4",
 
-        alimentazione: "Diesel"
+        alimentazione: "Gpl"
     },
 
     {
@@ -95,3 +95,42 @@ const carsList = [
     },
 
 ];
+
+const autoBenzina = carsList.filter(element => {
+
+    if(element.alimentazione === "Benzina") {
+
+        return true;
+
+    }
+
+    return false;
+});
+
+console.log(autoBenzina);
+
+const autoDiesel = carsList.filter(element => {
+
+    if(element.alimentazione === "Diesel") {
+
+        return true;
+
+    }
+
+    return false;
+});
+
+console.log(autoDiesel);
+
+const others = carsList.filter(element => {
+
+    if (element.alimentazione != "Diesel" && element.alimentazione != "Benzina") {
+
+        return true;
+    }
+
+    return false;
+})
+
+console.log(others);
+
